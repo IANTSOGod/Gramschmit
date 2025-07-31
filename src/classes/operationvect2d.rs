@@ -13,12 +13,12 @@ impl Operationvect2d {
         let currentpoint=self.vect.get_point();
         let point_x=currentpoint.get_x() as f64;
         let point_y=currentpoint.get_y() as f64;
-        let new_point=point::Point::new((point_x*scalaire) as i8, (point_y*scalaire) as i8);
+        let new_point=point::Point::new(point_x*scalaire , point_y*scalaire);
         let new_vect=vecteur::Vecteur::new(new_point);
         new_vect
     }    
 
-    pub fn prod_scalaire(&self,vect2:vecteur::Vecteur)->i8{
+    pub fn prod_scalaire(&self,vect2:vecteur::Vecteur)->f64{
         let point1=self.vect.get_point();
         let point1_x=point1.get_x();
         let point1_y=point1.get_y();
@@ -33,10 +33,10 @@ impl Operationvect2d {
     pub fn normalize(&self)->vecteur::Vecteur{
         let norme_vect=self.vect.get_norme();
         let point=self.vect.get_point();
-        let point_x=point.get_x() as f64;
-        let point_y=point.get_y() as f64;
-        let f_x=(point_x/norme_vect) as i8;
-        let f_y=(point_y/norme_vect) as i8;
+        let point_x=point.get_x();
+        let point_y=point.get_y();
+        let f_x=point_x/norme_vect;
+        let f_y=point_y/norme_vect;
         let f_point=point::Point::new(f_x, f_y);
         let f_vecteur=vecteur::Vecteur::new(f_point);
         f_vecteur

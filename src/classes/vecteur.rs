@@ -21,8 +21,8 @@ impl Vecteur{
     }
 
     pub fn get_norme(&self)->f64{
-        let x=self.point.get_x().pow(2);
-        let y=self.point.get_y().pow(2);
+        let x=self.point.get_x()*self.point.get_x();
+        let y=self.point.get_y()*self.point.get_y();
         let sum=x+y; 
         let norme=sum as f64;
         norme.sqrt()

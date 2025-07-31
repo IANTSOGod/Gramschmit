@@ -5,10 +5,8 @@ mod classes;
 
 fn main() {
     //points initialisants les Vect<u1,u2>
-    let pointa0=classes::point::Point::new(3, 0);
-    let x0=pointa0.get_x();
-    let x1=pointa0.get_y();
-    let pointa1=classes::point::Point::new(5, 3);
+    let pointa0=classes::point::Point::new(3.0, 1.0);
+    let pointa1=classes::point::Point::new(5.0, 3.0);
 
     //Les vecteurs <u1,u2>
     let u1=classes::vecteur::Vecteur::new(pointa0);

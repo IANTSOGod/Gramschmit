@@ -1,28 +1,28 @@
 
 #[derive(Clone)]
 pub struct Point{
-    x:i8,
-    y:i8,
+    x:f64,
+    y:f64,
 }
 
 impl Point{
-    pub fn new(a:i8,b:i8)->Point{
+    pub fn new(a:f64,b:f64)->Point{
         Point{x:a,y:b}
     }
 
     //getters
-    pub fn get_x(&self)->i8{
+    pub fn get_x(&self)->f64{
         self.x
     }
-    pub fn get_y(&self)->i8{
+    pub fn get_y(&self)->f64{
         self.y
     }
 
     //setters
-    pub fn set_x(&mut self,new_x:i8){
+    pub fn set_x(&mut self,new_x:f64){
         self.x=new_x;
     }
-    pub fn set_y(&mut self,new_y:i8){
+    pub fn set_y(&mut self,new_y:f64){
         self.y=new_y;
     }
 
