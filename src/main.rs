@@ -1,17 +1,24 @@
 mod classes;
 
-fn main() {
-    //creation d"un point
-    let mut point=classes::point::Point::new(2,3);
-    point.show();
-    point.set_x(1);
-    point.set_y(0);
-    point.show();
-    let x:i8=point.get_x();
-    let y:i8=point.get_y();
-    println!("{:?} et {:?} depuis getters",x,y);
+//But: trouver <v1,v2> 
 
-    //creation d"un vecteur
-    let vect=classes::vecteur::Vecteur::new(point);
-    println!("La norme de ce vecteur est {:?}",vect.get_norme());
+
+fn main() {
+    //points initialisants les Vect<u1,u2>
+    let pointa0=classes::point::Point::new(2, 0);
+    let x0=pointa0.get_x();
+    let x1=pointa0.get_y();
+    let pointa1=classes::point::Point::new(3, 1);
+
+    //Les vecteurs <u1,u2>
+    let u1=classes::vecteur::Vecteur::new(pointa0);
+    let u2=classes::vecteur::Vecteur::new(pointa1);
+
+    //on a v1=u1
+
+    //recherche e1
+    let norme_u1=u1.get_norme();
+    let v1_x=x0 as f64;
+    let v1_y=x1 as f64;
+    println!("V1 a x:{} et y:{}",v1_x/norme_u1,v1_y/norme_u1);
 }
