@@ -1,3 +1,5 @@
+
+#[derive(Clone)]
 pub struct Point{
     x:i8,
     y:i8,
@@ -33,6 +35,5 @@ impl Point{
 
 impl Drop for Point{
     fn drop(&mut self) {
-        print!("Instance de Point détruite")
     }
 }

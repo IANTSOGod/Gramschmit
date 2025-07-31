@@ -1,5 +1,6 @@
 use crate::classes::point;
 
+#[derive(Clone)]
 pub struct Vecteur{
     point: point::Point
 }
@@ -24,13 +25,18 @@ impl Vecteur{
         let y=self.point.get_y().pow(2);
         let sum=x+y; 
         let norme=sum as f64;
-        println!("Norme au carré {}",norme);
         norme.sqrt()
+    }
+
+    pub fn show(&self){
+        let point=self.get_point();
+        let point_x=point.get_x();
+        let point_y=point.get_y();
+        println!("On a le vecteur ({},{})",point_x,point_y)
     }
 }
 
 impl Drop for Vecteur{
     fn drop(&mut self) {
-        println!("Instance de Vecteur détruite")
     }
 }
