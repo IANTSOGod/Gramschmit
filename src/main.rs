@@ -5,7 +5,7 @@ mod classes;
 
 fn main() {
     //points initialisants les Vect<u1,u2>
-    let pointa0=classes::point::Point::new(1.0, 0.0);
+    let pointa0=classes::point::Point::new(1.0, 2.0);
     let pointa1=classes::point::Point::new(2.0, 5.0);
 
     //Les vecteurs <u1,u2>
@@ -19,6 +19,8 @@ fn main() {
     //normalisation u1
     let v1=u1_oper.normalize();
     v1.show();
+    let nv1=v1.get_norme();
+    println!("La norme de v1 est {}",nv1);
 
     //recherche v2
     //recherche projeté orthogonal
@@ -33,6 +35,9 @@ fn main() {
     let v2_pr_op=classes::operationvect2d::Operationvect2d::new(v2_pr);
     let v2=v2_pr_op.normalize();
     v2.show();
+    let nv2: f64=v2.get_norme();
+    println!("La norme de v2 est {}",nv2);
+    
 
     
     
