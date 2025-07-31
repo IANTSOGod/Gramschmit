@@ -24,8 +24,7 @@ impl Vecteur{
         let x=self.point.get_x()*self.point.get_x();
         let y=self.point.get_y()*self.point.get_y();
         let sum=x+y; 
-        let norme=sum as f64;
-        norme.sqrt()
+        sum.sqrt()
     }
 
     pub fn show(&self){
